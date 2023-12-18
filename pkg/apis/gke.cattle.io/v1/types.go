@@ -56,6 +56,7 @@ type GKEClusterConfigSpec struct {
 	MasterAuthorizedNetworksConfig *GKEMasterAuthorizedNetworksConfig `json:"masterAuthorizedNetworks,omitempty"`
 	Locations                      []string                           `json:"locations"`
 	MaintenanceWindow              *string                            `json:"maintenanceWindow,omitempty" norman:"pointer"`
+	AutopilotConfig                *GKEAutopilotConfig                `json:"autopilotConfig,omitempty"`
 }
 
 type GKEIPAllocationPolicy struct {
@@ -134,4 +135,8 @@ type GKECidrBlock struct {
 type GKENodePoolManagement struct {
 	AutoRepair  bool `json:"autoRepair,omitempty"`
 	AutoUpgrade bool `json:"autoUpgrade,omitempty"`
+}
+
+type GKEAutopilotConfig struct {
+	Enabled bool `json:"enabled,omitempty"`
 }
