@@ -68,7 +68,7 @@ var _ = Describe("CreateCluster", func() {
 	})
 
 	It("should successfully create cluster", func() {
-		createClusterRequest := newClusterCreateRequest(config)
+		createClusterRequest := NewClusterCreateRequest(config)
 		clusterServiceMock.EXPECT().
 			ClusterCreate(
 				ctx,
@@ -124,7 +124,7 @@ var _ = Describe("CreateCluster", func() {
 			Enabled: true,
 		}
 
-		createClusterRequest := newClusterCreateRequest(config)
+		createClusterRequest := NewClusterCreateRequest(config)
 		clusterServiceMock.EXPECT().
 			ClusterCreate(
 				ctx,
@@ -301,7 +301,7 @@ var _ = Describe("CreateNodePool", func() {
 	})
 
 	It("should successfully create cluster and node pool", func() {
-		createClusterRequest := newClusterCreateRequest(config)
+		createClusterRequest := NewClusterCreateRequest(config)
 		clusterServiceMock.EXPECT().
 			ClusterCreate(
 				ctx,
